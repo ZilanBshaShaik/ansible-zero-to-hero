@@ -17,5 +17,7 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 
 - Go to the file `/etc/ssh/sshd_config.d/60-cloudimg-settings.conf`
 - Update `PasswordAuthentication yes`
+- Go to the file `/etc/ssh/sshd_config`
+- Update PasswordAuthentication yes, to do this just remove the # from starting of the line
 - Restart SSH -> `sudo systemctl restart ssh`
 
